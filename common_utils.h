@@ -59,7 +59,7 @@ public:
     }
 
 	// 仅日志使用（不具备通用性）
-    std::string date_ms(long time_ms = 0)
+    static std::string date_ms(long time_ms = 0)
     {
         char date[128]; 
         long sec, msec;
