@@ -1,5 +1,5 @@
-#ifndef __COMMON_H__
-#define __COMMON_H__
+#ifndef __COMMON_UTILS_H__
+#define __COMMON_UTILS_H__
 
 #include <sys/time.h>
 #include <sys/syscall.h>
@@ -74,12 +74,12 @@ public:
             date, 
             sizeof(date), 
             "%04d-%02d-%02d_%02d:%02d:%02d.%03ld", 
-        	tmTime.tm_year + 1900,
-        	tmTime.tm_mon + 1,
-        	tmTime.tm_mday,
-        	tmTime.tm_hour,
-        	tmTime.tm_min,
-        	tmTime.tm_sec,
+        	tmm.tm_year + 1900,
+        	tmm.tm_mon + 1,
+        	tmm.tm_mday,
+        	tmm.tm_hour,
+        	tmm.tm_min,
+        	tmm.tm_sec,
         	msec
         );
         return date;
