@@ -41,6 +41,11 @@ public:
         return tv.tv_sec * 1000 + tv.tv_usec / 1000;
     }
 
+    inline static int gettid()
+    {
+        return syscall(SYS_gettid); 
+    }
+
     template <class... Args>
     static std::string format_string(const string& fmt, Args... args)
     {
